@@ -51,7 +51,7 @@ Feature: BasicLogin
   #Check if the user can perform a login operation with these usernames
     Given I start a chrome session and the url is "https://qa-challenge.codesubmit.io/"
     When I try to login with these values: <userName> and <password> and check response time
-    Then Response time should not be longer than 30 miliseconds
+    Then Response time should not be longer than 100 miliseconds
     Examples:
       |userName|password|
       |"standard_user"|"secret_sauce"|

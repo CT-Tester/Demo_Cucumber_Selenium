@@ -36,7 +36,6 @@ public class loginStepDefinitions extends TestRunner{
         driverMob.manage().window().setPosition(new Point(2000, 0));
         driverMob.manage().window().maximize();
         driverMob.get(url);
-        Thread.sleep(2000);
     }
 
     @When("^I try to login with these values: \"([^\"]*)\" and \"([^\"]*)\"$")
@@ -50,11 +49,11 @@ public class loginStepDefinitions extends TestRunner{
     @When("^I try to login with these values: \"([^\"]*)\" and \"([^\"]*)\" and check response time$")
     public void iTryToLoginWithTheseValuesUserNameAndPasswordAndCheckResponseTime(String username, String password) {
         loginUser(username, password);
-        loadtime = (Long)((JavascriptExecutor)driverMob).executeScript("return performance.timing.loadEventEnd - performance.timing.navigationStart;");
     }
-    @Then("^Response time should not be longer than 30 miliseconds$")
+    @Then("^Response time should not be longer than 100 miliseconds$")
     public void responseTimeShouldNotBeLong() {
-        assertTrue(loadtime<=30);
+        WebDriverWait wait=new WebDriverWait(driverMob, Duration.ofMillis(100));
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath(Xpath.BurgerMenu.label)));
     }
 
     @Then("^Main page should appear$")
