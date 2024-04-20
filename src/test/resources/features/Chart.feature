@@ -9,3 +9,4 @@ Feature: ChartOperations
     And I add one of every single item in the main page
     Then All added items should be displayed
     And I do a checkout of the selected items
+    And The total price plus shipping should be correct and the purchase is completed
