@@ -107,8 +107,6 @@ public class chartStepDefinitions {
         driverMob.findElement(By.xpath(Xpath.Continue.label)).click();
     }
 
-
-
     public void pageScreenshot(){
         byte[] screenshot = ((TakesScreenshot) driverMob).getScreenshotAs(OutputType.BYTES);
         scenario.attach(screenshot,"png", "image");
@@ -125,8 +123,14 @@ public class chartStepDefinitions {
             expectedTotalPrice=expectedTotalPrice + Double.parseDouble(itemPrice.getAttribute("innerText").substring(itemPrice.getAttribute("innerText").indexOf("$")+1));
         //Then I add the shipping cost
         expectedTotalPrice=expectedTotalPrice+shippingCost;
-        //Finally I compare the expected price to the total price displayed.
+        //Then I compare the expected price to the total price displayed.
         String totalPrice=driverMob.findElement(By.xpath(Xpath.TotalPrice.label)).getAttribute("innerText");
         assertEquals(Double.parseDouble(totalPrice.substring(totalPrice.indexOf("$")+1)),expectedTotalPrice);
+
+        //Finally, I click on "Finish" button
+        driverMob.findElement(By.xpath(Xpath.FinnishButton.label)).click();
+        assertEquals(driverMob.findElement(By.xpath(Xpath.PurchaseConfirmation.label)).getAttribute("innerText"),"Thank you for your order!");
+        driverMob.findElement(By.xpath(Xpath.BackHome.label)).click();
     }
+
 }
