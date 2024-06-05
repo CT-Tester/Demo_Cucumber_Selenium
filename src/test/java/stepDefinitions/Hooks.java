@@ -1,9 +1,6 @@
 package stepDefinitions;
 
-import io.cucumber.java.After;
-import io.cucumber.java.AfterAll;
-import io.cucumber.java.AfterStep;
-import io.cucumber.java.Scenario;
+import io.cucumber.java.*;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
@@ -49,13 +46,13 @@ public class Hooks extends runners.RunnerTest{
             driverMob.quit();
         }
         //I generate Cluecumber report in ${project.basedir}\GeneratedReport
-        geenerateCluecumberRep();
+        generateCluecumberRep();
     }
-    private static void geenerateCluecumberRep() throws InterruptedException, IOException {
+    private static void generateCluecumberRep() throws InterruptedException, IOException {
         //This procedure executes the maven command mvn "cluecumber-report:reporting" to generate the Cluecumber report
         // in ${project.basedir}\GeneratedReport
         Runtime runtime = Runtime.getRuntime();
-        Process p = runtime.exec("cmd.exe /c mvn cluecumber-report:reporting");
+        Process p = runtime.exec("cmd.exe /c mvn -f cluecumber-report:reporting");
         p.waitFor();
         int exitValue = p.exitValue();
         if (exitValue == 1){

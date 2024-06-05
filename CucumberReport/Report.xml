@@ -1,0 +1,212 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuite name="Cucumber" time="47.576" tests="22" skipped="0" failures="4" errors="0">
+<testcase classname="ChartOperations" name="TC01 Add all items and checkout" time="4.471">
+<failure type="java.lang.AssertionError" message="--ERROR--: Item name not valid">
+<![CDATA[java.lang.AssertionError: --ERROR--: Item name not valid
+	at stepDefinitions.chartStepDefinitions.checkItemsAdded(chartStepDefinitions.java:74)
+	at ✽.All added items should be displayed(file:///C:/Users/XS53SB/IdeaProjects/Demo_Cucumber_Selenium/src/test/resources/features/Chart.feature:10)
+]]>
+</failure>
+<system-out><![CDATA[
+Given I start a chrome session and the url is "https://qa-challenge.codesubmit.io/".passed
+When I login as username: "standard_user" and password: "secret_sauce"......passed
+And I add one of every single item in the main page.........................passed
+Then All added items should be displayed....................................failed
+And I do a checkout of the selected items...................................skipped
+And The total price plus shipping should be correct and the purchase is completed.skipped
+]]></system-out>
+</testcase>
+<testcase classname="BasicLogin" name="TC01_Online_Shop_Basic_Login - Example #1.1" time="0.779">
+<system-out><![CDATA[
+Given I start a chrome session and the url is "https://qa-challenge.codesubmit.io/".passed
+When I try to login with these values: "standard_user" and "secret_sauce"...passed
+Then Main page should appear................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="BasicLogin" name="TC01_Online_Shop_Basic_Login - Example #1.2" time="0.976">
+<failure type="java.lang.AssertionError" message="expected [0] but found [1]">
+<![CDATA[java.lang.AssertionError: expected [0] but found [1]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:1240)
+	at org.testng.Assert.assertEquals(Assert.java:1274)
+	at stepDefinitions.loginStepDefinitions.loginUser(loginStepDefinitions.java:45)
+	at ✽.I try to login with these values: "locked_out_user" and "secret_sauce"(file:///C:/Users/XS53SB/IdeaProjects/Demo_Cucumber_Selenium/src/test/resources/features/Login.feature:8)
+]]>
+</failure>
+<system-out><![CDATA[
+Given I start a chrome session and the url is "https://qa-challenge.codesubmit.io/".passed
+When I try to login with these values: "locked_out_user" and "secret_sauce".failed
+Then Main page should appear................................................skipped
+]]></system-out>
+</testcase>
+<testcase classname="BasicLogin" name="TC01_Online_Shop_Basic_Login - Example #1.3" time="0.722">
+<system-out><![CDATA[
+Given I start a chrome session and the url is "https://qa-challenge.codesubmit.io/".passed
+When I try to login with these values: "problem_user" and "secret_sauce"....passed
+Then Main page should appear................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="BasicLogin" name="TC01_Online_Shop_Basic_Login - Example #1.4" time="5.783">
+<system-out><![CDATA[
+Given I start a chrome session and the url is "https://qa-challenge.codesubmit.io/".passed
+When I try to login with these values: "performance_glitch_user" and "secret_sauce".passed
+Then Main page should appear................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="BasicLogin" name="TC01_Online_Shop_Basic_Login - Example #1.5" time="0.711">
+<system-out><![CDATA[
+Given I start a chrome session and the url is "https://qa-challenge.codesubmit.io/".passed
+When I try to login with these values: "error_user" and "secret_sauce"......passed
+Then Main page should appear................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="BasicLogin" name="TC01_Online_Shop_Basic_Login - Example #1.6" time="0.775">
+<system-out><![CDATA[
+Given I start a chrome session and the url is "https://qa-challenge.codesubmit.io/".passed
+When I try to login with these values: "visual_user" and "secret_sauce".....passed
+Then Main page should appear................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="BasicLogin" name="TC02_Login_then_logout - Example #1.1" time="1.398">
+<system-out><![CDATA[
+Given I start a chrome session and the url is "https://qa-challenge.codesubmit.io/".passed
+When I try to login with these values: "standard_user" and "secret_sauce"...passed
+Then I do a logout..........................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="BasicLogin" name="TC02_Login_then_logout - Example #1.2" time="1.354">
+<system-out><![CDATA[
+Given I start a chrome session and the url is "https://qa-challenge.codesubmit.io/".passed
+When I try to login with these values: "problem_user" and "secret_sauce"....passed
+Then I do a logout..........................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="BasicLogin" name="TC02_Login_then_logout - Example #1.3" time="6.348">
+<system-out><![CDATA[
+Given I start a chrome session and the url is "https://qa-challenge.codesubmit.io/".passed
+When I try to login with these values: "performance_glitch_user" and "secret_sauce".passed
+Then I do a logout..........................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="BasicLogin" name="TC02_Login_then_logout - Example #1.4" time="1.421">
+<system-out><![CDATA[
+Given I start a chrome session and the url is "https://qa-challenge.codesubmit.io/".passed
+When I try to login with these values: "error_user" and "secret_sauce"......passed
+Then I do a logout..........................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="BasicLogin" name="TC02_Login_then_logout - Example #1.5" time="0.853">
+<system-out><![CDATA[
+Given I start a chrome session and the url is "https://qa-challenge.codesubmit.io/".passed
+When I try to login with these values: "visual_user" and "secret_sauce".....passed
+Then I do a logout..........................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="BasicLogin" name="TC03_Login_check_main_page_elements_then_logout - Example #1.1" time="1.532">
+<system-out><![CDATA[
+Given I start a chrome session and the url is "https://qa-challenge.codesubmit.io/".passed
+When I try to login with these values: "standard_user" and "secret_sauce"...passed
+And I check item images.....................................................passed
+And I check item text.......................................................passed
+Then I do a logout..........................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="BasicLogin" name="TC03_Login_check_main_page_elements_then_logout - Example #1.2" time="1.324">
+<failure type="java.lang.AssertionError" message="expected [sauce-backpack-1200x1500.0a0b85a3.jpg] but found [sl-404.168b1cce.jpg]">
+<![CDATA[java.lang.AssertionError: expected [sauce-backpack-1200x1500.0a0b85a3.jpg] but found [sl-404.168b1cce.jpg]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.testng.Assert.assertEquals(Assert.java:665)
+	at stepDefinitions.loginStepDefinitions.iCheckItemImages(loginStepDefinitions.java:92)
+	at ✽.I check item images(file:///C:/Users/XS53SB/IdeaProjects/Demo_Cucumber_Selenium/src/test/resources/features/Login.feature:38)
+]]>
+</failure>
+<system-out><![CDATA[
+Given I start a chrome session and the url is "https://qa-challenge.codesubmit.io/".passed
+When I try to login with these values: "problem_user" and "secret_sauce"....passed
+And I check item images.....................................................failed
+And I check item text.......................................................skipped
+Then I do a logout..........................................................skipped
+]]></system-out>
+</testcase>
+<testcase classname="BasicLogin" name="TC03_Login_check_main_page_elements_then_logout - Example #1.3" time="6.868">
+<system-out><![CDATA[
+Given I start a chrome session and the url is "https://qa-challenge.codesubmit.io/".passed
+When I try to login with these values: "performance_glitch_user" and "secret_sauce".passed
+And I check item images.....................................................passed
+And I check item text.......................................................passed
+Then I do a logout..........................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="BasicLogin" name="TC03_Login_check_main_page_elements_then_logout - Example #1.4" time="1.839">
+<system-out><![CDATA[
+Given I start a chrome session and the url is "https://qa-challenge.codesubmit.io/".passed
+When I try to login with these values: "error_user" and "secret_sauce"......passed
+And I check item images.....................................................passed
+And I check item text.......................................................passed
+Then I do a logout..........................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="BasicLogin" name="TC03_Login_check_main_page_elements_then_logout - Example #1.5" time="1.305">
+<failure type="java.lang.AssertionError" message="expected [sauce-backpack-1200x1500.0a0b85a3.jpg] but found [sl-404.168b1cce.jpg]">
+<![CDATA[java.lang.AssertionError: expected [sauce-backpack-1200x1500.0a0b85a3.jpg] but found [sl-404.168b1cce.jpg]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.testng.Assert.assertEquals(Assert.java:665)
+	at stepDefinitions.loginStepDefinitions.iCheckItemImages(loginStepDefinitions.java:92)
+	at ✽.I check item images(file:///C:/Users/XS53SB/IdeaProjects/Demo_Cucumber_Selenium/src/test/resources/features/Login.feature:38)
+]]>
+</failure>
+<system-out><![CDATA[
+Given I start a chrome session and the url is "https://qa-challenge.codesubmit.io/".passed
+When I try to login with these values: "visual_user" and "secret_sauce".....passed
+And I check item images.....................................................failed
+And I check item text.......................................................skipped
+Then I do a logout..........................................................skipped
+]]></system-out>
+</testcase>
+<testcase classname="BasicLogin" name="TC04_Check_login_response_time - Example #1.1" time="0.73">
+<system-out><![CDATA[
+Given I start a chrome session and the url is "https://qa-challenge.codesubmit.io/".passed
+When I try to login with these values: "standard_user" and "secret_sauce" and check response time.passed
+Then Response time should not be longer than 100 miliseconds................passed
+]]></system-out>
+</testcase>
+<testcase classname="BasicLogin" name="TC04_Check_login_response_time - Example #1.2" time="0.76">
+<system-out><![CDATA[
+Given I start a chrome session and the url is "https://qa-challenge.codesubmit.io/".passed
+When I try to login with these values: "problem_user" and "secret_sauce" and check response time.passed
+Then Response time should not be longer than 100 miliseconds................passed
+]]></system-out>
+</testcase>
+<testcase classname="BasicLogin" name="TC04_Check_login_response_time - Example #1.3" time="5.738">
+<system-out><![CDATA[
+Given I start a chrome session and the url is "https://qa-challenge.codesubmit.io/".passed
+When I try to login with these values: "performance_glitch_user" and "secret_sauce" and check response time.passed
+Then Response time should not be longer than 100 miliseconds................passed
+]]></system-out>
+</testcase>
+<testcase classname="BasicLogin" name="TC04_Check_login_response_time - Example #1.4" time="0.682">
+<system-out><![CDATA[
+Given I start a chrome session and the url is "https://qa-challenge.codesubmit.io/".passed
+When I try to login with these values: "error_user" and "secret_sauce" and check response time.passed
+Then Response time should not be longer than 100 miliseconds................passed
+]]></system-out>
+</testcase>
+<testcase classname="BasicLogin" name="TC04_Check_login_response_time - Example #1.5" time="0.741">
+<system-out><![CDATA[
+Given I start a chrome session and the url is "https://qa-challenge.codesubmit.io/".passed
+When I try to login with these values: "visual_user" and "secret_sauce" and check response time.passed
+Then Response time should not be longer than 100 miliseconds................passed
+]]></system-out>
+</testcase>
+</testsuite>

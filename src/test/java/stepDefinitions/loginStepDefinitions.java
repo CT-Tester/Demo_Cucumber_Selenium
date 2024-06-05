@@ -19,7 +19,6 @@ import java.util.List;
 import java.util.Locale;
 
 import static org.testng.Assert.assertEquals;
-//import static org.junit.Assert.assertEquals;
 
 public class loginStepDefinitions {
     public static WebDriver driverMob;
@@ -138,10 +137,5 @@ public class loginStepDefinitions {
             }
         }
     }
-
-    /*public void pageScreenshot(Scenario scenario){
-        byte[] screenshot = ((TakesScreenshot) driverMob).getScreenshotAs(OutputType.BYTES);
-        scenario.attach(screenshot,"png", "image");
-    }*/
 
 }
