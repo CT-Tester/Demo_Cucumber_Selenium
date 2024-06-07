@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ### Objective
 
 This project has been created to automate the tests of a fictional online shop (https://qa-challenge.codesubmit.io/)
@@ -29,3 +30,7 @@ You can run it using the maven command: "mvn test".
 ### Test results-Report
 After the test execution you can check the report located in ./GeneratedReport/index.html.
 This is a Cluecumber report where you can check the error. There are images added to the errors and to the last step of every test case. 
+=======
+# Demo_Cucumber_Selenium
+Demo test automation project combining Selenium and Cucumber frameworks
+>>>>>>> main
