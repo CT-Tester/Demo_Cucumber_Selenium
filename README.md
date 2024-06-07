@@ -1,43 +1,31 @@
 ### Objective
 
-Your assignment is to write automated test cases for an online shop to test the core functionality of the site.
+This project has been created to automate the tests of a fictional online shop (https://qa-challenge.codesubmit.io/)
 
-### Brief
+### Test plan 
 
-The product team at CKW AG has come up with a [simple MVP for an online shop](https://qa-challenge.codesubmit.io). Help the team get confidence in further development by automatically testing the most critical features of the app by doing the following:
+These are the functional test cases that have been implemented so far:
 
-### Tasks
+Login feaature
+--------------
+-01 Login operation using all the available credentials
+-02 Log out operations using all valid credentials
+-03 Main page item images should be correct
+-04 Check Login response time
 
--   Compile a list of several testable user flows, cases, or scenarios. This doesn't have to cover every possible real-life case; please focus on what you think is most fundamental (e.g., sign in).
+Chart feature
+-------------
+-01 Buy all items available, complete the checkout, verify that the total price plus shipping is correct.
 
-| Site        | URL                                |
-| ----------- | ---------------------------------- |
-| Online Shop | https://qa-challenge.codesubmit.io |
+### How to run it
+This project was developed to run using Chrome webdriver version v124_0_6367_155 for Windows 64. Before to execute the 
+project verify if your browser version is compatible to this Chromedriver version. 
+You can check it here: https://googlechromelabs.github.io/chrome-for-testing/
+To update the webdriver version, just download the correct wedriver version for your Chrome browser, unzip it and replace 
+the chromedriver.exe in /src/test/resources/drivers. 
 
-Make sure to test scenarios for all provided user accounts.
+You can run it using the maven command: "mvn test". 
 
-| User                    | Description                                                             |
-| ----------------------- | ----------------------------------------------------------------------- |
-| standard_user           | The site should work as expected for this user                          |
-| locked_out_user         | User is locked out and should not be able to log in.                    |
-| problem_user            | Images are not loading for this user.                                   |
-| performance_glitch_user | This user has high loading times. Does the site still work as expected? |
-
--   Implement automated browser tests for all flows. Use any testing technology you'd like – Cypress, Selenium, or any other you think would work well
-
-### Evaluation Criteria
-
--   **Automation & QA** best practices
--   Show us your work through your commit history
--   We're looking for you to produce working code, with enough room to demonstrate how to structure components in a small program
--   Completeness: did you complete the features?
--   Correctness: does the functionality act in sensible, thought-out ways?
--   Maintainability: is it written in a clean, maintainable way?
-
-### CodeSubmit
-
-Please organize, design, test and document your code as if it were going into production - then push your changes to the master branch. After you have pushed your code, you may submit the assignment on the assignment page.
-
-**Have fun building!** 🚀
-
-The CKW AG Team
+### Test results-Report
+After the test execution you can check the report located in ./GeneratedReport/index.html.
+This is a Cluecumber report where you can check the error. There are images added to the errors and to the last step of every test case. 

@@ -16,7 +16,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features="classpath:src/test/resources/features",
+        features="src/test/resources/features",
         glue="stepDefinitions",
         plugin={ "pretty", "html:CucumberReport/Report.html", "json:CucumberReport/Report.json", "junit:CucumberReport/Report.xml"},
 
@@ -71,4 +71,5 @@ public class RunnerTest {
         }
         return driver;
     });
+
 }
