@@ -120,6 +120,5 @@
             <artifactId>surefire-junit4</artifactId>
             <version>3.2.5</version>
         </dependency>
-
     </dependencies>
 </project>

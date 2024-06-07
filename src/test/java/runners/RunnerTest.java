@@ -2,6 +2,7 @@ package runners;
 
 import java.io.File;
 
+
 import io.cucumber.junit.Cucumber;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.Platform;
@@ -12,11 +13,13 @@ import io.cucumber.junit.CucumberOptions;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
+
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features="src/test/resources/features",
+        features="classpath:src/test/resources/features",
         glue="stepDefinitions",
         plugin={ "pretty", "html:CucumberReport/Report.html", "json:CucumberReport/Report.json", "junit:CucumberReport/Report.xml"},
+
         monochrome=true
 )
 
@@ -68,5 +71,4 @@ public class RunnerTest {
         }
         return driver;
     });
-
 }
