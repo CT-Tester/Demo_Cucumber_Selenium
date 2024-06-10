@@ -1,7 +1,9 @@
 
 Objective
 ---------
-This project has been created to automate the tests of a fictional online shop (https://qa-challenge.codesubmit.io/)
+This project has been created to automate the tests of a fictional online shop (https://qa-challenge.codesubmit.io/). 
+The tests have been automated using Selenium and Cucumber frameworks, and the test results are generated using Cluecumber 
+reports.
 
 Test plan 
 ---------
