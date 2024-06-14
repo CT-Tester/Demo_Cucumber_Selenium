@@ -3,6 +3,7 @@ package runners;
 import java.io.File;
 
 
+
 import io.cucumber.junit.Cucumber;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.Platform;
@@ -13,6 +14,9 @@ import io.cucumber.junit.CucumberOptions;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
+//Web driver manager
+import io.github.bonigarcia.wdm.WebDriverManager;
+import io.cucumber.java.BeforeAll;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
@@ -24,6 +28,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 )
 
 public class RunnerTest {
+
 
     //Getter and setter of the WebDriver
     public static WebDriver getDriver() {
@@ -39,7 +44,9 @@ public class RunnerTest {
         RemoteWebDriver driver;
         try {
             //Driver for Chrome 124.0.6367.119(chrome driver v124.0.6367.155) and Windows operative system
-            System.setProperty("webdriver.chrome.driver", ".\\src\\test\\resources\\drivers\\chromedriver.exe");
+            //This block has been commented due to to Driver Manager library automatically downloads the correct
+            // chrome driver version.
+            /*System.setProperty("webdriver.chrome.driver", ".\\src\\test\\resources\\drivers\\chromedriver.exe");
             try {
                 checkDriver = new File(".\\src\\test\\resources\\drivers\\chromedriver.exe").isFile();
             } catch (Exception e2) {
@@ -47,7 +54,7 @@ public class RunnerTest {
                 e2.printStackTrace();
             }
             if (!checkDriver)
-                System.out.println("ChromeDriver doesn´t  exist");
+                System.out.println("ChromeDriver doesn´t  exist");*/
 
             //new DesiredCapabilities();
             System.out.println(System.getProperties().values());
@@ -56,7 +63,9 @@ public class RunnerTest {
             //This capability is set to true to prevent the certificate warning pop up messages
             options.setCapability(CapabilityType.ACCEPT_INSECURE_CERTS, true);
 
-            options.setCapability(CapabilityType.PLATFORM_NAME, Platform.WIN10);
+            //I comment this line to let the driver manager to download the webdriver manager to download the  correct Chromedriver
+            // version according to the operative system where this code is executed.
+            //options.setCapability(CapabilityType.PLATFORM_NAME, Platform.WIN10);
 
             options.setCapability(CapabilityType.BROWSER_NAME, "chrome");
             options.addArguments("--disable-impl-side-painting", "--enable-gpu-rasterization", "--force-gpu-rasterization", "--whitelist-ips=\"\"");

@@ -1,6 +1,7 @@
 package stepDefinitions;
 
 import io.cucumber.java.*;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
@@ -12,6 +13,11 @@ import java.io.InputStreamReader;
 import static stepDefinitions.loginStepDefinitions.driverMob;
 
 public class Hooks extends runners.RunnerTest{
+    //WebDriver Manager
+    @BeforeAll
+    static void setupClass() {
+        WebDriverManager.chromedriver().setup();
+    }
 
     @AfterStep
     public void takeScreenshotOnFailure(Scenario scenario) {
@@ -42,8 +48,12 @@ public class Hooks extends runners.RunnerTest{
         //I close the chrome driver session
         try {
             driverMob.close();
-        } catch (Exception e) {
-            driverMob.quit();
+        } catch (Exception e1) {
+            try {
+                driverMob.quit();
+            } catch (Exception e2){
+                e2.printStackTrace();
+            }
         }
         //I generate Cluecumber report in ${project.basedir}\GeneratedReport
         generateCluecumberRep();
@@ -52,7 +62,7 @@ public class Hooks extends runners.RunnerTest{
         //This procedure executes the maven command mvn "cluecumber-report:reporting" to generate the Cluecumber report
         // in ${project.basedir}\GeneratedReport
         Runtime runtime = Runtime.getRuntime();
-        Process p = runtime.exec("cmd.exe /c mvn -f cluecumber-report:reporting");
+        Process p = runtime.exec("cmd.exe /c mvn cluecumber-report:reporting");
         p.waitFor();
         int exitValue = p.exitValue();
         if (exitValue == 1){

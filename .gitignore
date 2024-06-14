@@ -318,3 +318,7 @@ gradle-app.setting
 # IntelliJ files
 .idea/
 *.iml
+
+#Report folders
+CucumberReport/
+GeneratedReport/
