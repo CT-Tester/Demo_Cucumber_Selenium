@@ -36,7 +36,7 @@ the chromedriver.exe in /src/test/resources/drivers.
 - June 13th 2024
 We have modified the code to include Boni Garcia library to manage automatically Chrome Driver versions. This library 
 sets up the correct version of the ChromeDriver according to the version of Chrome browser  and the operative 
-system.
+system. You won´t need to download the correct version of the Chromedriver, library will do it automatically.
 You can find more information about this library here: https://bonigarcia.dev/webdrivermanager/
 
 How to run it
