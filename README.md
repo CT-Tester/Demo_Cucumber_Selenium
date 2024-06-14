@@ -29,12 +29,12 @@ History
 This project was developed to run using Chrome webdriver version v124_0_6367_155 for Windows 64. Before to execute the 
 project verify if your browser version is compatible to this Chromedriver version.
 
-You can check it here: https://googlechromelabs.github.io/chrome-for-testing/
+    You can check it here: https://googlechromelabs.github.io/chrome-for-testing/
 To update the webdriver version, just download the correct wedriver version for your Chrome browser, unzip it and replace
 the chromedriver.exe in /src/test/resources/drivers.
 
 - June 13th 2024
-We have modified the code to include Boni Garcia library to manage automatically Chrome Driver versions. This library 
+We have modified the code to include Boni Garcia´s library to manage automatically Chrome Driver versions. This library 
 sets up the correct version of the ChromeDriver according to the version of Chrome browser  and the operative 
 system. You won´t need to download the correct version of the Chromedriver, library will do it automatically.
 You can find more information about this library here: https://bonigarcia.dev/webdrivermanager/
